@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<ul style="width: 50%; margin: 0 auto;">
+  {{#each events}}
+  <li>{{type}} {{repo.url}}</li>
+  {{#if payload.commits}}
+  <li>
+    <ul>
+      {{#each payload.commits}}
+        <li>{{message}}</li>
+      {{/each}}
+    </ul>
+  </li>
+  {{/if}}
+  {{/each}}
+</ul>
